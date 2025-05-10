@@ -4,11 +4,12 @@ const bookSchema = new mongoose.Schema({
     bookId: { type: String, required: true, unique: true },
     title: { type: String, required: true },
     author: { type: String, required: true },
-    numberOfPages: { type: Number },
+    numberOfPages: { type: String }, 
     category: { type: String },
-    publishedAt: { type: Date },
+    publishedAt: { type: String },
     language: { type: String },
-    price: { type: Number }
+    price: { type: String }
 });
 
 module.exports = mongoose.model("Book", bookSchema);
+

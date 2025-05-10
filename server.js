@@ -16,13 +16,16 @@ mongoose.connect(process.env.mongoos_uri,{
 
 
 
-const authorRoutes = require("./routes/author")
+const teacherRoutes = require("./routes/teacher")
 const BOOKRoutes = require("./routes/book")
-const BookshopRoutes = require("./routes/bookshop")
-app.use('/author', authorRoutes) 
+const studentRoutes = require("./routes/student")
+const parentsRoutes = require("./routes/Parents.js")
+const EmployeeRoutes = require("./routes/employee.js")
+app.use('/teacher', teacherRoutes) 
 app.use('/book',BOOKRoutes)
- app.use('/bookshop',BookshopRoutes)
-
+ app.use('/student',studentRoutes)
+app.use('/parents', parentsRoutes) 
+app.use('/Employee', EmployeeRoutes)
 
  const PORT=process.env.PORT||5000
  app.listen(PORT,()=>{
